@@ -3,10 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Tag Wiki (Compat)</title>
-
+<title>Tag Wiki (update)</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
-
 <style>
 :root{
   --bg:#0b0c10;--panel:#121318;--text:#e8e8e8;--muted:#a7a7a7;--accent:#71c9f8;
@@ -16,45 +14,30 @@
 html,body{margin:0;height:100%;background:var(--bg);color:var(--text);
   font:16px/1.55 "Pretendard Variable",Pretendard,system-ui,-apple-system,Segoe UI,Roboto,Noto Sans KR,Apple SD Gothic Neo,sans-serif}
 a{color:inherit;text-decoration:none}
-
 header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #1c1f29;position:relative;z-index:10}
 .wrap{max-width:1100px;margin:0 auto;padding:20px}
 .title{display:flex;align-items:center;gap:10px}
 .title h1{margin:0;font-size:20px;font-weight:800;letter-spacing:.2px}
 .desc{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.6}
-
-.toggle{margin-top:10px;padding:12px 14px;background:var(--panel);border:1px solid #2a2f3b;border-radius:10px}
-.toggle summary{cursor:pointer;font-weight:600;color:var(--accent);list-style:none}
-.toggle summary::-webkit-details-marker{display:none}
-.toggle[open]{box-shadow:0 0 0 2px rgba(113,201,248,.08) inset}
-.toggle p{margin:10px 0 0;font-size:14px;color:var(--muted);line-height:1.6}
-
 .fixed-controls{position:sticky;top:0;z-index:15;background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.9));backdrop-filter:blur(8px);padding:16px 20px 10px;border-bottom:1px solid #1c1f29}
 .controls{display:grid;gap:10px;grid-template-columns:1fr;grid-template-areas:"q" "sort" "reset" "count"}
-.controls .q{grid-area:q}
-.controls .sort{grid-area:sort}
-.controls .reset{grid-area:reset}
+.controls .q{grid-area:q}.controls .sort{grid-area:sort}.controls .reset{grid-area:reset}
 .controls .count{grid-area:count;justify-self:end;color:var(--muted);font-size:13px}
 .controls input,.controls select,.controls button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2a2f3b;background:var(--panel);color:var(--text)}
-.controls input::placeholder{color:var(--muted)}
-.controls button{cursor:pointer;border-color:#2f3b47}
+.controls input::placeholder{color:var(--muted)}.controls button{cursor:pointer;border-color:#2f3b47}
 @media(min-width:900px){.controls{grid-template-columns:1fr 180px 240px auto;grid-template-areas:"q sort reset count"}}
-
 .section-head{display:flex;align-items:center;gap:10px;margin:12px 0 8px}
 .badge{font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid #506086;color:#a9c4ff;background:#12182a;padding:4px 8px;border-radius:6px;text-transform:uppercase}
 .sep{height:1px;background:linear-gradient(90deg,#2a3244,transparent);margin:10px 0}
-
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}
 .chip{border-radius:999px;border:1.5px solid;cursor:pointer;user-select:none;transition:background .15s,border-color .15s,color .15s,transform .05s}
-.chip:active{transform:translateY(1px)}
-.chip:focus-visible{outline:2px solid #88c3ff;outline-offset:3px}
+.chip:active{transform:translateY(1px)}.chip:focus-visible{outline:2px solid #88c3ff;outline-offset:3px}
 .chip.parent{padding:7px 13px;font-size:14px;font-weight:600;background:#202a42;border-color:#4b5f8f;color:#eaf1ff;box-shadow:0 4px 10px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05)}
 .chip.parent:hover{background:#2a3654;border-color:#6f86d6}
 .chip.parent.active{background:#5aa8ff;border-color:#82c6ff;color:#0a0e15;font-weight:700;box-shadow:0 0 0 2px rgba(130,198,255,.35),0 8px 16px rgba(0,0,0,.4)}
 .chip.facet{padding:7px 12px;font-size:13.5px;font-weight:600;background:#161f31;border-color:#4a566e;color:#e6ecff}
 .chip.facet:hover{background:#203152;border-color:#6c82c0}
 .chip.facet.active{background:#3e5fa8;border-color:#6f8fd6;color:#fff;box-shadow:0 0 0 2px rgba(111,143,214,.25)}
-
 main{padding:24px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -70,13 +53,15 @@ main{padding:24px 0}
 .badges{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 10px}
 .badge2{background:#202538;border:1px solid #2a2f46;border-radius:999px;padding:6px 10px;font-size:12px;color:#cfd3ff}
 .copyBtn{position:absolute;right:8px;bottom:8px;padding:7px 10px;border-radius:10px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);backdrop-filter:blur(4px);color:#dff2ff;cursor:pointer}
-
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f1724;border:1px solid #2a3651;color:#cfe9ff;padding:10px 14px;border-radius:12px;opacity:0;transition:.25s;pointer-events:none}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .empty{color:var(--muted);text-align:center;padding:40px;border:1px dashed #2b3241;border-radius:12px}
 #toTop{position:fixed;bottom:28px;right:28px;background:rgba(10,12,18,.8);border:1px solid #2a2f3b;color:var(--accent);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
 #toTop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 #toTop:hover{background:rgba(113,201,248,.15)}
+/* crumb 폰트 수정 */
+#crumb{font-size:13px;color:#b9c6e8;margin:6px 0 2px;font-weight:500}
+#crumb b{color:#eaf1ff;font-weight:600}
 </style>
 </head>
 <body>
@@ -101,8 +86,6 @@ main{padding:24px 0}
       <button type="button" class="reset" id="reset">정렬/검색 초기화 (즐겨찾기 유지)</button>
       <div class="count"><span id="count">0</span>개 표시 중</div>
     </div>
-
-    <!-- 필터 영역 -->
     <section id="filter">
       <div class="section-head">
         <span class="badge">카테고리</span>
@@ -120,9 +103,7 @@ main{padding:24px 0}
         <button type="button" class="chip parent" data-cat="배경·환경">배경·환경</button>
         <button type="button" class="chip parent" data-cat="소품·효과">소품·효과</button>
       </div>
-
       <div class="sep"></div>
-
       <div class="section-head">
         <span class="badge">하위 분류</span>
         <span id="facetHelp" style="font-size:12px;color:#9fb2de">상위 카테고리를 먼저 선택하세요</span>
@@ -132,205 +113,48 @@ main{padding:24px 0}
   </div>
 </div>
 
-<main class="wrap">
-  <div id="grid" class="grid"></div>
-  <div id="empty" class="empty" hidden>검색 결과가 없어요.</div>
-</main>
-
+<main class="wrap"><div id="grid" class="grid"></div><div id="empty" class="empty" hidden>검색 결과가 없어요.</div></main>
 <button id="toTop" title="맨 위로" type="button">↑</button>
 <div id="toast" class="toast"></div>
 
 <script>
-/* ====== 데이터 (필요 시 확장) ====== */
-var DATA = [
-  {id:'base-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'고품질 플래그',aliases:['best quality'],copyText:'masterpiece, best quality'},
-  {id:'base-002',key:'portrait',cat:'베이스',facet:'초점',desc:'인물 위주 구도',aliases:['bust shot'],copyText:'portrait, bust shot'},
-  {id:'char-001',key:'1boy',cat:'캐릭터',facet:'인원',desc:'남성 1인',aliases:['solo male'],copyText:'1boy'},
-  {id:'char-002',key:'stoic',cat:'캐릭터',facet:'성격',desc:'과묵/무표정',aliases:['serene'],copyText:'stoic'},
-  {id:'prim-001',key:'strong jawline',cat:'기본 외형',facet:'얼굴',desc:'각진 턱선',aliases:[],copyText:'strong jawline'},
-  {id:'sec-001',key:'black hair',cat:'세부 외형',facet:'머리카락',desc:'검은 머리',aliases:[],copyText:'black hair'},
-  {id:'wear-001',key:'dress pants',cat:'의상',facet:'하의',desc:'슬랙스',aliases:['slacks'],copyText:'dress pants'},
-  {id:'wear-002',key:'long one-piece',cat:'의상',facet:'원피스',desc:'롱 원피스',aliases:['one piece'],copyText:'one-piece dress'},
-  {id:'pose-001',key:'looking at viewer',cat:'동작',facet:'시선',desc:'정면 응시',aliases:['eye contact'],copyText:'looking at viewer'},
-  {id:'inter-001',key:'reaching toward viewer',cat:'상호작용',facet:'뷰어',desc:'시점 향해 손 뻗음',aliases:[],copyText:'reaching toward viewer'},
-  {id:'bg-001',key:'indoor, cafe',cat:'배경·환경',facet:'실내',desc:'실내 카페',aliases:['cafe interior'],copyText:'indoor, cafe'},
-  {id:'prop-001',key:'light rays',cat:'소품·효과',facet:'시각 효과',desc:'빛줄기',aliases:['god rays'],copyText:'light rays'}
-];
-
-/* ====== FACETS (원피스 포함) ====== */
-var FACETS = {
+/* ========== 예시 데이터 ========== */
+var DATA=[{id:'base-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'고품질 플래그',aliases:['best quality'],copyText:'masterpiece, best quality'}];
+var FACETS={
   "베이스":["품질","작화","테마","초점","조명","연출","배경","장소","카메라"],
-  "캐릭터":["인원","연령","인종/피부톤","성격","종족","직업","관계"],
-  "기본 외형":["얼굴","피부색","체형","날개","꼬리"],
-  "세부 외형":["머리카락","눈","귀/코/입","손/손톱","기타"],
-  "의상":["상의","아우터/정장","하의","원피스","신발","액세서리"],
-  "동작":["표정","포즈","시선","움직임"],
-  "상호작용":["뷰어","타 캐릭터","사물/환경","구도"],
-  "배경·환경":["실내","야외","자연","도시","시간대/기상","분위기"],
-  "소품·효과":["무기/장비","생활/장식","시각 효과"]
+  "의상":["상의","아우터/정장","하의","원피스","신발","액세서리"]
 };
-
-document.addEventListener('DOMContentLoaded', function(){
-
-  /* DOM */
-  function $(sel,root){ return (root||document).querySelector(sel); }
-  var g=$('#grid'), empty=$('#empty'), q=$('#q'), sortSel=$('#sort'),
-      resetBtn=$('#reset'), countEl=$('#count'), toastEl=$('#toast'),
-      toTop=$('#toTop'), catChips=$('#catChips'), facetChips=$('#facetChips'),
-      facetHelp=$('#facetHelp'), crumb=$('#crumb');
-
-  /* 저장소 */
-  var safeStore=(function(){ try{ var k='__chk__'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return localStorage; }catch(e){ var m={}; return {getItem:function(k){return m[k]||null},setItem:function(k,v){m[k]=v},removeItem:function(k){delete m[k]}} }})();
-  var FKEY='wiki:favorites';
-  function getFav(){ try{ return new Set(JSON.parse(safeStore.getItem(FKEY)||'[]')); }catch(e){ return new Set(); } }
-  function setFav(s){ try{ safeStore.setItem(FKEY, JSON.stringify(Array.from(s))); }catch(e){} }
-
-  /* 상태/정렬 인덱스 */
-  var orderIndex=new Map(DATA.map(function(it,i){ return [it.id,i]; }));
+document.addEventListener('DOMContentLoaded',function(){
+  function $(s,r){return(r||document).querySelector(s)}
+  var g=$('#grid'),empty=$('#empty'),q=$('#q'),sortSel=$('#sort'),resetBtn=$('#reset'),
+  countEl=$('#count'),toastEl=$('#toast'),toTop=$('#toTop'),
+  catChips=$('#catChips'),facetChips=$('#facetChips'),facetHelp=$('#facetHelp'),crumb=$('#crumb');
+  var orderIndex=new Map(DATA.map(function(it,i){return[it.id,i]}));
   var state={cat:'ALL',facets:new Set(),q:'',sort:'original'};
-
-  /* 렌더 */
-  function makeCard(item){
-    var favs=getFav(); var isFav=favs.has(item.id);
-    var el=document.createElement('article'); el.className='card'+(isFav?' isFav':'');
-    var thumb='<div class="thumb noThumb"></div>';
-    var aliasHtml='';
-    if(item.aliases && item.aliases.length){
-      aliasHtml = '<div class="badges">'+ item.aliases.map(function(a){return '<span class="badge2">'+a+'</span>';}).join('') + '</div>';
-    }
-    var descHtml = item.desc ? '<div class="meta"><div class="sub">'+item.desc+'</div></div>' : '';
-    el.innerHTML =
-      '<button type="button" class="favBtn" aria-pressed="'+(isFav?'true':'false')+'" data-id="'+item.id+'">★</button>'+
-      thumb+
-      '<button type="button" class="copyBtn" data-clip="'+(item.copyText||item.key)+'">복사</button>'+
-      '<div class="meta"><div class="name">'+item.key+'</div><div class="sub">'+(item.cat||'')+' · '+(item.facet||'-')+'</div></div>'+
-      aliasHtml+
-      descHtml;
+  function makeCard(it){
+    var el=document.createElement('article');el.className='card';
+    el.innerHTML='<div class="thumb noThumb"></div><button type="button" class="copyBtn" data-clip="'+(it.copyText||it.key)+'">복사</button><div class="meta"><div class="name">'+it.key+'</div><div class="sub">'+it.cat+' · '+it.facet+'</div></div>';
     return el;
   }
-
-  function filterByState(list){
-    var kw=(state.q||'').toLowerCase().trim();
-    var arr=list.slice();
-    if(state.cat!=='ALL') arr=arr.filter(function(it){ return it.cat===state.cat; });
-    if(state.facets.size){
-      arr=arr.filter(function(it){ return state.facets.has(it.facet); });
-    }
-    if(kw){
-      arr=arr.filter(function(it){
-        var hit = false;
-        if((it.key||'').toLowerCase().indexOf(kw)>-1) hit=true;
-        if(!hit && (it.desc||'').toLowerCase().indexOf(kw)>-1) hit=true;
-        if(!hit && it.aliases && it.aliases.some(function(a){ return (a||'').toLowerCase().indexOf(kw)>-1; })) hit=true;
-        if(!hit && (it.cat||'').toLowerCase().indexOf(kw)>-1) hit=true;
-        if(!hit && (it.facet||'').toLowerCase().indexOf(kw)>-1) hit=true;
-        return hit;
-      });
-    }
-    var favs=getFav(), fa=[], na=[];
-    arr.forEach(function(i){ (favs.has(i.id)?fa:na).push(i); });
-
-    function byTitle(a,b){ return a.key.localeCompare(b.key,'ko',{numeric:true,sensitivity:'base'}); }
-    function byOld(a,b){ return orderIndex.get(a.id)-orderIndex.get(b.id); }
-    function byNew(a,b){ return orderIndex.get(b.id)-orderIndex.get(a.id); }
-    function byDescLen(a,b){ return (a.desc?a.desc.length:0) - (b.desc?b.desc.length:0); }
-
-    function apply(a){
-      switch(state.sort){
-        case 'newest': return a.sort(byNew);
-        case 'titleAsc': return a.sort(byTitle);
-        case 'titleDesc': return a.sort(function(x,y){ return byTitle(y,x); });
-        case 'descLen': return a.sort(byDescLen);
-        case 'original':
-        default: return a.sort(byOld);
-      }
-    }
-    return apply(fa).concat(apply(na));
-  }
-
-  function render(){
-    var list=filterByState(DATA);
-    g.innerHTML=''; list.forEach(function(it){ g.appendChild(makeCard(it)); });
-    empty.hidden = list.length!==0;
-    countEl.textContent = String(list.length);
-  }
-
-  /* 칩 렌더/이벤트 */
   function renderFacetChips(){
-    facetChips.innerHTML='';
-    var list=(state.cat==='ALL')?[]:(FACETS[state.cat]||[]);
-    if(!list.length){ facetHelp.textContent='상위 카테고리를 먼저 선택하세요'; return; }
+    facetChips.innerHTML='';var list=(state.cat==='ALL')?[]:(FACETS[state.cat]||[]);
+    if(!list.length){facetHelp.textContent='상위 카테고리를 먼저 선택하세요';return;}
     facetHelp.textContent='다중 선택 가능';
-    list.forEach(function(name){
-      var b=document.createElement('button');
-      b.type='button'; b.className='chip facet'; b.dataset.facet=name; b.textContent=name;
-      if(state.facets.has(name)) b.classList.add('active');
-      facetChips.appendChild(b);
-    });
+    list.forEach(function(n){var b=document.createElement('button');b.type='button';b.className='chip facet';b.dataset.facet=n;b.textContent=n;if(state.facets.has(n))b.classList.add('active');facetChips.appendChild(b);});
   }
-
-  catChips.addEventListener('click', function(e){
-    var btn=e.target.closest && e.target.closest('button.chip.parent[data-cat]');
-    if(!btn) return;
-    Array.prototype.forEach.call(catChips.querySelectorAll('button.chip.parent'), function(x){
-      x.classList.toggle('active', x===btn);
-    });
-    state.cat=btn.getAttribute('data-cat');
-    state.facets=new Set();
-    crumb.innerHTML='선택: <b>'+state.cat+'</b>';
-    renderFacetChips(); render();
+  catChips.addEventListener('click',function(e){
+    var b=e.target.closest('button.chip.parent[data-cat]');if(!b)return;
+    [].forEach.call(catChips.querySelectorAll('button.chip.parent'),function(x){x.classList.toggle('active',x===b)});
+    state.cat=b.dataset.cat;state.facets.clear();crumb.innerHTML='선택: <b>'+state.cat+'</b>';renderFacetChips();render();
   });
-
-  facetChips.addEventListener('click', function(e){
-    var btn=e.target.closest && e.target.closest('button.chip.facet[data-facet]');
-    if(!btn) return;
-    btn.classList.toggle('active');
-    var selected=[];
-    Array.prototype.forEach.call(facetChips.querySelectorAll('.chip.facet.active'), function(b){
-      selected.push(b.getAttribute('data-facet'));
-    });
-    state.facets=new Set(selected);
-    render();
+  facetChips.addEventListener('click',function(e){
+    var b=e.target.closest('button.chip.facet[data-facet]');if(!b)return;b.classList.toggle('active');
+    var sel=[].map.call(facetChips.querySelectorAll('.chip.facet.active'),function(x){return x.dataset.facet});
+    state.facets=new Set(sel);render();
   });
-
-  /* 기타 이벤트 */
-  function toast(msg){
-    toastEl.textContent=msg;
-    toastEl.classList.add('show');
-    setTimeout(function(){ toastEl.classList.remove('show'); },1200);
-  }
-
-  g.addEventListener('click', function(ev){
-    var copy=ev.target.closest && ev.target.closest('.copyBtn');
-    if(copy){
-      var text=copy.getAttribute('data-clip')||'';
-      if(navigator.clipboard && navigator.clipboard.writeText){
-        navigator.clipboard.writeText(text).then(function(){ toast('복사 완료!'); }, function(){ toast('복사 실패'); });
-      }else{
-        // Fallback
-        var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta);
-        ta.select(); try{ document.execCommand('copy'); toast('복사 완료!'); }catch(e){ toast('복사 실패'); }
-        document.body.removeChild(ta);
-      }
-      return;
-    }
-    var star=ev.target.closest && ev.target.closest('.favBtn');
-    if(star){
-      var favs=getFav(); var id=star.getAttribute('data-id');
-      if(favs.has(id)) favs.delete(id); else favs.add(id);
-      setFav(favs); render(); return;
-    }
-  });
-
-  q.addEventListener('input', function(e){ state.q=e.target.value; render(); });
-  sortSel.addEventListener('change', function(e){ state.sort=e.target.value; render(); });
-  resetBtn.addEventListener('click', function(){ q.value=''; state.q=''; sortSel.value='original'; state.sort='original'; render(); });
-
-  window.addEventListener('scroll', function(){ if(window.scrollY>300) toTop.classList.add('show'); else toTop.classList.remove('show'); });
-  toTop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
-
-  /* 시작 */
-  renderFacetChips(); render();
+  function filterByState(list){var arr=list;if(state.cat!=='ALL')arr=arr.filter(function(i){return i.cat===state.cat});if(state.facets.size)arr=arr.filter(function(i){return state.facets.has(i.facet)});return arr;}
+  function render(){var list=filterByState(DATA);g.innerHTML='';list.forEach(function(i){g.appendChild(makeCard(i))});empty.hidden=list.length!==0;countEl.textContent=list.length;}
+  renderFacetChips();render();
 });
 </script>
 </body>

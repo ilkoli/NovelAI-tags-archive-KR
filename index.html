@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>NovelAI 태그 KR</title>
 
-<!-- Pretendard -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
 
 <style>
@@ -50,7 +49,7 @@ header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-
 .chip:active{transform:translateY(1px)}
 .chip:focus-visible{outline:2px solid #88c3ff;outline-offset:3px}
 
-/* 상위칩(축소) */
+/* 상위칩 */
 .chip.parent{
   padding:7px 13px;font-size:14px;font-weight:600;
   background:#202a42;border-color:#4b5f8f;color:#eaf1ff;
@@ -70,7 +69,7 @@ header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-
 .chip.facet:hover{background:#203152;border-color:#6c82c0}
 .chip.facet.active{background:#3e5fa8;border-color:#6f8fd6;color:#fff;box-shadow:0 0 0 2px rgba(111,143,214,.25)}
 
-/* 브레드크럼(작게/절제) */
+/* 브레드크럼 */
 #crumb{font-size:13px;color:#b9c6e8;margin:6px 0 2px;font-weight:500}
 #crumb b{color:#eaf1ff;font-weight:600}
 
@@ -82,21 +81,26 @@ main{padding:24px 0}
 .card{position:relative;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid #22293a;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .card.isFav{border-color:#8a6f2a;box-shadow:0 0 0 2px rgba(255,209,102,.2),var(--shadow)}
 
-.favBtn{position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);color:#6b7a8d;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25)}
-.favBtn[aria-pressed="true"]{background:rgba(255,209,102,.2);color:var(--fav);border-color:#8a6f2a;box-shadow:0 0 0 2px rgba(255,209,102,.2),0 6px 16px rgba(0,0,0,.35)}
-
 .thumbWrap{position:relative}
 .thumb{aspect-ratio:1/1;display:block;width:100%;object-fit:cover;background:#0d0f14}
 .thumb.err{display:none}
 .thumb.placeholder{display:block;aspect-ratio:1/1;width:100%;background:linear-gradient(135deg,#151924,#1b2030)}
 
-.copyBtn{position:absolute;right:8px;bottom:8px;padding:7px 10px;border-radius:10px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);backdrop-filter:blur(4px);color:#dff2ff;cursor:pointer}
+.favBtn{
+  position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:999px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);
+  color:#6b7a8d;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25); z-index:3;
+}
+.favBtn[aria-pressed="true"]{background:rgba(255,209,102,.2);color:var(--fav);border-color:#8a6f2a;box-shadow:0 0 0 2px rgba(255,209,102,.2),0 6px 16px rgba(0,0,0,.35)}
+
+.copyBtn{
+  position:absolute;right:8px;bottom:8px;padding:7px 10px;border-radius:10px;border:1px solid #2a2f3b;
+  background:rgba(10,12,18,.75);backdrop-filter:blur(4px);color:#dff2ff;cursor:pointer; z-index:2;
+}
 
 .meta{padding:10px 12px;border-top:1px solid #22293a}
 .meta .name{font-size:15px;font-weight:800}
 .meta .sub{margin-top:4px;color:var(--muted);font-size:12px}
-.badges{display:flex;flex-wrap:wrap;gap:8px;padding:0 12px 10px}
-.badge2{background:#202538;border:1px solid #2a2f46;border-radius:999px;padding:6px 10px;font-size:12px;color:#cfd3ff}
 
 /* misc */
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f1724;border:1px solid #2a3651;color:#cfe9ff;padding:10px 14px;border-radius:12px;opacity:0;transition:.25s;pointer-events:none}
@@ -118,7 +122,7 @@ main{padding:24px 0}
 <div class="fixed-controls">
   <div class="wrap">
     <div class="controls">
-      <input class="q" id="q" placeholder="검색(표시명/별칭/설명/분류)"/>
+      <input class="q" id="q" placeholder="검색(표시명/설명/분류)"/>
       <select class="sort" id="sort">
         <option value="original">등록순</option>
         <option value="newest">최신순</option>
@@ -169,101 +173,24 @@ main{padding:24px 0}
 <div id="toast" class="toast"></div>
 
 <script>
-/* ====== 데이터 ====== */
-/* img: 외부 호스팅 URL 사용. 없으면 자동 플래이스홀더 표시 */
+/* ====== 데이터 예시 (네 데이터로 교체/추가) ====== */
 var DATA = [
-  // 베이스
-  {id:'base-001',key:'masterpiece',cat:'베이스',facet:'품질',
-   desc:'마스터피스',copyText:'masterpiece',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-002',key:'distict',cat:'베이스',facet:'품질',
-   desc:'뚜렷한',copyText:'distict',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-003',key:'blurry',cat:'베이스',facet:'품질',
-   desc:'흐릿한',copyText:'blurry',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-004',key:'high resolution',cat:'베이스',facet:'품질',
-   desc:'높은 해상도',copyText:'highres',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-005',key:'low resolution',cat:'베이스',facet:'품질',
-   desc:'낮은 해상도',copyText:'low resolution',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-006',key:'high quality',cat:'베이스',facet:'품질',
-   desc:'고퀄리티',copyText:'high quality',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-007',key:'low quality',cat:'베이스',facet:'품질',
-   desc:'저퀄리티',copyText:'low quality',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-008',key:'super detail',cat:'베이스',facet:'품질',
-   desc:'높은 디테잏',copyText:'super detail',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-009',key:'finely detailed',cat:'베이스',facet:'품질',
-   desc:'정교한 디테일',copyText:'finely detailed',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-010',key:'intricate detail',cat:'베이스',facet:'품질',
-   desc:'복잡한 디테일',copyText:'intricate detail',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-011',key:'detailed *',cat:'베이스',facet:'품질',
-   desc:'디테일한 무언가',copyText:'detailed *',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-012',key:'perfect anatomy',cat:'베이스',facet:'품질',
-   desc:'완벽한 해부학(신체)',copyText:'perfect anatomy',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-013',key:'perfect *',cat:'베이스',facet:'품질',
-   desc:'완벽한 *(신체부위)',copyText:'perfect *',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-014',key:'missing anatomy',cat:'베이스',facet:'품질',
-   desc:'잘못된 해부학',copyText:'missing anatomy',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-015',key:'missing *',cat:'베이스',facet:'품질',
-   desc:'잘못된 *(신체부위)',copyText:'missing *',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-016',key:'extra *',cat:'베이스',facet:'품질',
-   desc:'복수의 *(신체부위) | 신체 추가',copyText:'extra *',
-   img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-
-  // 캐릭터
-  {id:'char-001',key:'1boy',cat:'캐릭터',facet:'인원',
-   desc:'남성 1인',copyText:'1boy',
-   img:'https://picsum.photos/seed/1boy/600'},
-
-  // 기본 외형
-  {id:'prim-001',key:'strong jawline',cat:'기본 외형',facet:'얼굴',
-   desc:'각진 턱선',copyText:'strong jawline',
-   img:'https://picsum.photos/seed/jaw/600'},
-
-  // 세부 외형
-  {id:'sec-001',key:'black hair',cat:'세부 외형',facet:'머리카락',
-   desc:'검은 머리',copyText:'black hair',
-   img:'https://picsum.photos/seed/hair/600'},
-
-  // 의상
-  {id:'wear-001',key:'dress pants',cat:'의상',facet:'하의',
-   desc:'슬랙스',copyText:'dress pants',
-   img:'https://picsum.photos/seed/pants/600'},
-  {id:'wear-002',key:'one-piece dress',cat:'의상',facet:'원피스',
-   desc:'원피스',copyText:'one-piece dress',
-   img:'https://picsum.photos/seed/onepiece/600'},
-
-  // 동작
-  {id:'pose-001',key:'looking at viewer',cat:'동작',facet:'시선',
-   desc:'정면 응시',copyText:'looking at viewer',
-   img:'https://picsum.photos/seed/look/600'},
-
-  // 상호작용
-  {id:'inter-001',key:'reaching toward viewer',cat:'상호작용',facet:'뷰어',
-   desc:'시점 향해 손 뻗음',copyText:'reaching toward viewer',
-   img:'https://picsum.photos/seed/reach/600'},
-
-  // 배경·환경
-  {id:'bg-001',key:'indoor, cafe',cat:'배경·환경',facet:'실내',
-   desc:'실내 카페',copyText:'indoor, cafe',
-   img:'https://picsum.photos/seed/cafe/600'},
-
-  // 소품·효과
-  {id:'prop-001',key:'light rays',cat:'소품·효과',facet:'시각 효과',
-   desc:'빛줄기',copyText:'light rays',
-   img:'https://picsum.photos/seed/rays/600'}
+  {id:'base-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'마스터피스',copyText:'masterpiece',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-002',key:'distict',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distict',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-003',key:'blurry',cat:'베이스',facet:'품질',desc:'흐릿한',copyText:'blurry',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-004',key:'high resolution',cat:'베이스',facet:'품질',desc:'높은 해상도',copyText:'highres',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-005',key:'low resolution',cat:'베이스',facet:'품질',desc:'낮은 해상도',copyText:'low resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-006',key:'high quality',cat:'베이스',facet:'품질',desc:'고퀄리티',copyText:'high quality',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-007',key:'low quality',cat:'베이스',facet:'품질',desc:'저퀄리티',copyText:'low quality',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-008',key:'super detail',cat:'베이스',facet:'품질',desc:'높은 디테일',copyText:'super detail',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-009',key:'finely detailed',cat:'베이스',facet:'품질',desc:'정교한 디테일',copyText:'finely detailed',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-010',key:'intricate detail',cat:'베이스',facet:'품질',desc:'복잡한 디테일',copyText:'intricate detail',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-011',key:'detailed *',cat:'베이스',facet:'품질',desc:'디테일한 무언가',copyText:'detailed *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-012',key:'perfect anatomy',cat:'베이스',facet:'품질',desc:'완벽한 해부학(신체)',copyText:'perfect anatomy',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-013',key:'perfect *',cat:'베이스',facet:'품질',desc:'완벽한 *(신체부위)',copyText:'perfect *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-014',key:'missing anatomy',cat:'베이스',facet:'품질',desc:'잘못된 해부학',copyText:'missing anatomy',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-015',key:'missing *',cat:'베이스',facet:'품질',desc:'잘못된 *(신체부위)',copyText:'missing *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'base-016',key:'extra *',cat:'베이스',facet:'품질',desc:'복수의 *(신체부위) | 신체 추가',copyText:'extra *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
 ];
 
 /* ====== FACETS ====== */
@@ -302,11 +229,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var favs=getFav(); var isFav=favs.has(item.id);
     var el=document.createElement('article');
     el.className='card'+(isFav?' isFav':'');
-    var aliasHtml=(item.aliases&&item.aliases.length)
-      ? '<div class="badges">'+item.aliases.map(function(a){return '<span class="badge2">'+a+'</span>';}).join('')+'</div>' : '';
     var descHtml=item.desc?'<div class="meta"><div class="sub">'+item.desc+'</div></div>':'';
 
-    // 썸네일: 이미지가 있으면 <img>, 없거나 에러면 placeholder 표시
     var thumbHTML='';
     if(item.img){
       thumbHTML =
@@ -326,9 +250,8 @@ document.addEventListener('DOMContentLoaded', function(){
       '<button type="button" class="favBtn" aria-pressed="'+(isFav?'true':'false')+'" data-id="'+item.id+'">★</button>'+
       thumbHTML+
       '<div class="meta"><div class="name">'+item.key+'</div><div class="sub">'+(item.cat||'')+' · '+(item.facet||'-')+'</div></div>'+
-      aliasHtml + descHtml;
+      descHtml;
 
-    // 이미지 에러 핸들링 → placeholder로 대체
     var imgEl = el.querySelector('img.thumb');
     if(imgEl){
       imgEl.addEventListener('error', function(){
@@ -350,8 +273,7 @@ document.addEventListener('DOMContentLoaded', function(){
     if(kw){
       arr=arr.filter(function(it){
         function inc(s){ return (s||'').toLowerCase().indexOf(kw)>-1; }
-        return inc(it.key)||inc(it.desc)||inc(it.cat)||inc(it.facet)||
-               (it.aliases||[]).some(function(a){return inc(a);});
+        return inc(it.key)||inc(it.desc)||inc(it.cat)||inc(it.facet);
       });
     }
     var favs=getFav(), fa=[], na=[];
@@ -455,4 +377,4 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 </body>
-  </html>
+</html>

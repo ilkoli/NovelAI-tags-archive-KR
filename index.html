@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>NovelAI 태그 KR</title>
+<title>NovelAI Tags Archive KR</title>
 
+<!-- Pretendard -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
 
 <style>
@@ -26,7 +27,7 @@ header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-
 .title h1{margin:0;font-size:22px;font-weight:800;letter-spacing:.2px}
 .desc{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.6}
 
-/* sticky controls */
+/* controls (스크롤시 위로 사라지게) */
 .fixed-controls{position:relative;top:0;z-index:15;background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.9));backdrop-filter:blur(8px);padding:16px 20px 10px;border-bottom:1px solid #1c1f29}
 .controls{display:grid;gap:10px;grid-template-columns:1fr;grid-template-areas:"q" "sort" "reset" "count"}
 .controls .q{grid-area:q}
@@ -38,7 +39,7 @@ header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-
 .controls button{cursor:pointer;border-color:#2f3b47}
 @media(min-width:900px){.controls{grid-template-columns:1fr 180px 240px auto;grid-template-areas:"q sort reset count"}}
 
-/* 구역 라벨 */
+/* 섹션 라벨 */
 .section-head{display:flex;align-items:center;gap:10px;margin:12px 0 8px}
 .badge{font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid #506086;color:#a9c4ff;background:#12182a;padding:4px 8px;border-radius:6px;text-transform:uppercase}
 .sep{height:1px;background:linear-gradient(90deg,#2a3244,transparent);margin:10px 0}
@@ -73,7 +74,7 @@ header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-
 #crumb{font-size:13px;color:#b9c6e8;margin:6px 0 2px;font-weight:500}
 #crumb b{color:#eaf1ff;font-weight:600}
 
-/* grid / card */
+/* 카드 */
 main{padding:24px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -100,9 +101,9 @@ main{padding:24px 0}
 
 .meta{padding:10px 12px;border-top:1px solid #22293a}
 .meta .name{font-size:15px;font-weight:800}
-.meta .sub{margin-top:4px;color:var(--muted);font-size:12px}
+.meta .sub{margin-top:4px;color:#aeb6c9;font-size:12px}
 
-/* misc */
+/* 기타 */
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f1724;border:1px solid #2a3651;color:#cfe9ff;padding:10px 14px;border-radius:12px;opacity:0;transition:.25s;pointer-events:none}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .empty{color:var(--muted);text-align:center;padding:40px;border:1px dashed #2b3241;border-radius:12px}
@@ -116,10 +117,8 @@ main{padding:24px 0}
   <div class="wrap">
     <div class="title"><h1>NovelAI Tags Archive KR</h1></div>
     <p class="desc">
-      카테고리/하위 분류 칩으로 필터링.<br>
-      '복사' 버튼으로 태그 복사, ★ 즐겨찾기(상단 고정)<br>
-      오류 제보, 개선 문의, 등록 요청 → 트위터 @ilkoli_AI<br>
-      🏗 공사중... 현재 베이스 태그 채우는 중...
+      칩으로 필터링 · '복사' 버튼 · ★ 즐겨찾기(상단 고정)<br>
+      공유 링크(구글 드라이브 포함) 그대로 넣어도 이미지 표시됨
     </p>
   </div>
 </header>
@@ -177,54 +176,42 @@ main{padding:24px 0}
 <div id="toast" class="toast"></div>
 
 <script>
-/* ====== 데이터 예시 (네 데이터로 교체/추가) ====== */
+/* ====== 공유 링크 → 직접 표시 가능한 이미지 URL로 변환 ====== */
+/* 기본값: 드라이브는 썸네일(w600)로 변환. item.thumbSize로 개별 변경 가능. */
+function toDirectImage(url, size){
+  if(!url) return url;
+  var s = size || 600;
+
+  // Google Drive: /file/d/<ID>/view
+  var m = url.match(/https?:\/\/drive\.google\.com\/file\/d\/([^/]+)/i);
+  if(m) return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
+
+  // Google Drive: ...?id=<ID>
+  m = url.match(/[?&]id=([^&]+)/i);
+  if(m && /drive\.google\.com/i.test(url)) {
+    return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
+  }
+
+  // Google Drive "uc?export=" 형태 → 썸네일로 치환
+  m = url.match(/https?:\/\/drive\.google\.com\/uc\?.*?[?&]id=([^&]+)/i);
+  if(m) return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
+
+  // 그 외(이미 직접 URL이거나 다른 호스팅)은 그대로
+  return url;
+}
+
+/* ====== 데이터 예시 ====== */
+/* img에 드라이브 공유 링크를 그냥 넣어도 됨 */
 var DATA = [
   {id:'base-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'마스터피스',copyText:'masterpiece',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-002',key:'distict',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distict',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-003',key:'blurry',cat:'베이스',facet:'품질',desc:'흐릿한',copyText:'blurry',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-004',key:'high resolution',cat:'베이스',facet:'품질',desc:'높은 해상도',copyText:'highres',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-005',key:'low resolution',cat:'베이스',facet:'품질',desc:'낮은 해상도',copyText:'low resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-006',key:'high quality',cat:'베이스',facet:'품질',desc:'고퀄리티',copyText:'high quality',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-007',key:'low quality',cat:'베이스',facet:'품질',desc:'저퀄리티',copyText:'low quality',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-008',key:'super detail',cat:'베이스',facet:'품질',desc:'높은 디테일',copyText:'super detail',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-009',key:'finely detailed',cat:'베이스',facet:'품질',desc:'정교한 디테일',copyText:'finely detailed',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-010',key:'intricate detail',cat:'베이스',facet:'품질',desc:'복잡한 디테일',copyText:'intricate detail',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-011',key:'detailed *',cat:'베이스',facet:'품질',desc:'디테일한 무언가',copyText:'detailed *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-012',key:'perfect anatomy',cat:'베이스',facet:'품질',desc:'완벽한 해부학(신체)',copyText:'perfect anatomy',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-013',key:'perfect *',cat:'베이스',facet:'품질',desc:'완벽한 *(신체부위)',copyText:'perfect *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-014',key:'missing anatomy',cat:'베이스',facet:'품질',desc:'잘못된 해부학',copyText:'missing anatomy',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-015',key:'missing *',cat:'베이스',facet:'품질',desc:'잘못된 *(신체부위)',copyText:'missing *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'base-016',key:'extra *',cat:'베이스',facet:'품질',desc:'복수의 *(신체부위) | 신체 추가',copyText:'extra *',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'base-017',key:'sketch',cat:'베이스',facet:'화풍',desc:'스케치',copyText:'sketch',img:'https://i.postimg.cc/cJcpQRs5/sketch.png'},
-  {id:'base-018',key:'ligne claire',cat:'베이스',facet:'화풍',desc:'명확한 선',copyText:'ligne claire',img:'https://i.postimg.cc/Vk2qDpNg/ligne-claire.png'},
-  {id:'base-019',key:'lineart',cat:'베이스',facet:'화풍',desc:'선화',copyText:'lineart',img:'https://i.postimg.cc/66zCDyQk/lineart.png'},
-  {id:'base-020',key:'traditional media',cat:'베이스',facet:'화풍',desc:'전통 캔버스 그림',copyText:'traditional media',img:'https://i.postimg.cc/59G2YVKX/traditional-media.png'},
-  {id:'base-021',key:'faux traditional media',cat:'베이스',facet:'화풍',desc:'가짜 전통 캔버스 그림',copyText:'faux traditional media',img:'https://i.postimg.cc/9fVG6TGf/faux-traditional-media.png'},
-  {id:'base-022',key:'mixed media',cat:'베이스',facet:'화풍',desc:'전통 캔버스+디지털 그림',copyText:'mixed media',img:'https://i.postimg.cc/mZq7bKYx/mixed-media.png'},
-  {id:'base-023',key:'unconventional media',cat:'베이스',facet:'화풍',desc:'디지털이나 전통 그림이 아닌 다른 모든 그림',copyText:'unconventional media',img:'https://i.postimg.cc/9M0q2B0g/unconventional-media.png'},
-  {id:'base-024',key:'acrylic paint (medium)',cat:'베이스',facet:'화풍',desc:'아크릴 페인트',copyText:'acrylic paint (medium)',img:'https://i.postimg.cc/kgFmM3tT/acrylic-paint.png'},
-  {id:'base-025',key:'ballpoint pen (medium)',cat:'베이스',facet:'화풍',desc:'볼펜',copyText:'ballpoint pen (medium)',img:'https://i.postimg.cc/Y0kPsjd7/ballpoint-pen.png'},
-  {id:'base-026',key:'calligraphy brush (medium)',cat:'베이스',facet:'화풍',desc:'캘리그라피 브러쉬',copyText:'calligraphy brush (medium)',img:'https://i.postimg.cc/3NdG7FSD/calligraphy-brush.png'},
-  {id:'base-027',key:'colored pencil (medium)',cat:'베이스',facet:'화풍',desc:'색연필',copyText:'colored pencil (medium)',img:'https://i.postimg.cc/tgqz1f2r/colored-pencil.png'},
-  {id:'base-028',key:'graphite (medium)',cat:'베이스',facet:'화풍',desc:'연필',copyText:'graphite (medium)',img:'https://i.postimg.cc/hGmKdyv7/graphite.png'},
-  {id:'base-029',key:'ink (medium)',cat:'베이스',facet:'화풍',desc:'잉크',copyText:'ink (medium)',img:'https://i.postimg.cc/c1v6xmMb/ink.png'},
-  {id:'base-030',key:'marker (medium)',cat:'베이스',facet:'화풍',desc:'마커',copyText:'marker (medium)',img:'https://i.postimg.cc/JhgVPbDM/marker.png'},
-  {id:'base-031',key:'millipen (medium)',cat:'베이스',facet:'화풍',desc:'밀리펜',copyText:'millipen (medium)',img:'https://i.postimg.cc/4Nw0Wzjx/millipen.png'},
-  {id:'base-032',key:'nib pen (medium)',cat:'베이스',facet:'화풍',desc:'만년필',copyText:'nib pen (medium)',img:'https://i.postimg.cc/DyDrf0X6/nib-pen.png'},
-  {id:'base-033',key:'oil painting (medium)',cat:'베이스',facet:'화풍',desc:'유화',copyText:'oil painting (medium)',img:'https://i.postimg.cc/26ZQZDNQ/oil-painting.png'},
-  {id:'base-034',key:'painting (medium)',cat:'베이스',facet:'화풍',desc:'일반 물감',copyText:'painting (medium)',img:'https://i.postimg.cc/ZKVd0Rvx/painting.png'},
-  {id:'base-035',key:'pastel (medium)',cat:'베이스',facet:'화풍',desc:'파스텔',copyText:'pastel (medium)',img:'https://i.postimg.cc/XJkvhHw5/pastel.png'},
-  {id:'base-036',key:'pen (medium)',cat:'베이스',facet:'화풍',desc:'펜',copyText:'pen (medium)',img:'https://i.postimg.cc/brFqcKdD/pen.png'},
-  {id:'base-037',key:'watercolor (medium)',cat:'베이스',facet:'화풍',desc:'수채화',copyText:'watercolor (medium)',img:'https://i.postimg.cc/7Lqd9KZP/watercolor.png'},
-  {id:'base-038',key:'watercolor pencil (medium)',cat:'베이스',facet:'화풍',desc:'수채화 연필',copyText:'watercolor pencil (medium)',img:'https://i.postimg.cc/kXQdy6vS/watercolor-pencil.png'},
-  {id:'base-039',key:'3d',cat:'베이스',facet:'화풍',desc:'3D',copyText:'3d',img:'https://drive.google.com/file/d/17cOJ2BqlNihAIQtw9lpaVuciK9Wky2l2'},
-  {id:'base-040',key:'ai-generated, ai-assisted',cat:'베이스',facet:'화풍',desc:'AI 생성풍 이미지',copyText:'ai-generated, ai-assisted',img:'https://i.postimg.cc/PxLmG8XW/ai-generated-ai-assisted.png'},
-  {id:'base-041',key:'anime screenshot',cat:'베이스',facet:'화풍',desc:'애니 스샷',copyText:'anime screenshot',img:'https://i.postimg.cc/CxPBFL6P/anime-screenshot.png'},
-  {id:'base-042',key:'pixel art',cat:'베이스',facet:'화풍',desc:'픽셀 아트',copyText:'pixel art',img:'https://i.postimg.cc/DwZ0Y3yF/pixel-art.png'},
-  {id:'base-043',key:'fantasy',cat:'베이스',facet:'장르',desc:'판타지',copyText:'fantasy',img:'https://i.postimg.cc/q7vXNvjH/fantasy.png'},
-  {id:'base-044',key:'romance fantasy',cat:'베이스',facet:'장르',desc:'로맨스 판타지',copyText:'romance fantasy',img:'https://i.postimg.cc/vBRBpP15/romance-fantasy.png'},
-  {id:'base-045',key:'steampunk',cat:'베이스',facet:'장르',desc:'스팀펑크',copyText:'steampunk',img:'https://i.postimg.cc/Yqyt5XZt/steampunk.png'},
-  {id:'base-046',key:'dieselpunk',cat:'베이스',facet:'장르',desc:'디젤펑크',copyText:'dieselpunk',img:'https://i.postimg.cc/2yKgKtyj/dieselpunk.png'},
+  {id:'base-039',key:'3d',cat:'베이스',facet:'화풍',desc:'3D',copyText:'3d',
+   /* 드라이브 공유 링크(예시): 그대로 넣음 */
+   img:'https://drive.google.com/file/d/17cOJ2BqlNihAIQtw9lpaVuciK9Wky2l2/view?usp=drivesdk',
+   /* 이 항목만 썸네일 폭 800으로 원하면 다음 줄 주석 해제 */
+   // thumbSize: 800
+  },
+  {id:'base-043',key:'fantasy',cat:'베이스',facet:'장르',desc:'판타지',copyText:'fantasy',img:'https://i.postimg.cc/q7vXNvjH/fantasy.png'}
 ];
 
 /* ====== FACETS ====== */
@@ -265,25 +252,17 @@ document.addEventListener('DOMContentLoaded', function(){
     el.className='card'+(isFav?' isFav':'');
     var descHtml=item.desc?'<div class="meta"><div class="sub">'+item.desc+'</div></div>':'';
 
-    var thumbHTML='';
-    if(item.img){
-      thumbHTML =
-        '<div class="thumbWrap">'+
-          '<img class="thumb" loading="lazy" src="'+item.img+'" alt="'+item.key+'"/>'+
-          '<button type="button" class="copyBtn" data-clip="'+(item.copyText||item.key)+'">복사</button>'+
-        '</div>';
-    }else{
-      thumbHTML =
-        '<div class="thumbWrap">'+
-          '<div class="thumb placeholder"></div>'+
-          '<button type="button" class="copyBtn" data-clip="'+(item.copyText||item.key)+'">복사</button>'+
-        '</div>';
-    }
+    // 공유 링크를 자동 변환해서 사용
+    var src = toDirectImage(item.img, item.thumbSize);
+
+    var thumbHTML = src
+      ? '<div class="thumbWrap"><img class="thumb" loading="lazy" src="'+src+'" alt="'+(item.key||"")+'"/><button type="button" class="copyBtn" data-clip="'+(item.copyText||item.key||'')+'">복사</button></div>'
+      : '<div class="thumbWrap"><div class="thumb placeholder"></div><button type="button" class="copyBtn" data-clip="'+(item.copyText||item.key||'')+'">복사</button></div>';
 
     el.innerHTML =
       '<button type="button" class="favBtn" aria-pressed="'+(isFav?'true':'false')+'" data-id="'+item.id+'">★</button>'+
       thumbHTML+
-      '<div class="meta"><div class="name">'+item.key+'</div><div class="sub">'+(item.cat||'')+' · '+(item.facet||'-')+'</div></div>'+
+      '<div class="meta"><div class="name">'+(item.key||'')+'</div><div class="sub">'+(item.cat||'')+' · '+(item.facet||'-')+'</div></div>'+
       descHtml;
 
     var imgEl = el.querySelector('img.thumb');

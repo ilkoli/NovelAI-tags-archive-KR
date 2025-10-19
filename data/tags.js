@@ -105,7 +105,7 @@ window.DATA = [
   {id:'img-103',key:'lantern',cat:'베이스',facet:'조명',desc:'랜턴',copyText:'lantern',img:'https://drive.google.com/file/d/1C8F5iQ996QZt8EwdM24RZ7r-SEWZAdiE'},
   {id:'img-104',key:'flashlight',cat:'베이스',facet:'조명',desc:'손전등',copyText:'flashlight',img:'https://drive.google.com/file/d/1BCrDCzFCPyckleIgGbbpB5yWqru2AmQU'},
   {id:'img-105',key:'ballroom',cat:'베이스',facet:'장소',desc:'무도회장',copyText:'ballroom',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4ROGD'},
-  {id:'img-106',key:'bathroom',cat:'베이스',facet:'장소',desc:'욕실',copyText:'bathroom',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4R0GD'},
+  {id:'img-106',key:'bathroom',cat:'베이스',facet:'장소',desc:'욕실',copyText:'bathroom',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4ROGD'},
   {id:'img-107',key:'bedroom',cat:'베이스',facet:'장소',desc:'침실',copyText:'bedroom',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4ROGD'},
   {id:'img-108',key:'cafeteria',cat:'베이스',facet:'장소',desc:'식당(급식소)',copyText:'cafeteria',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4ROGD'},
   {id:'img-109',key:'classroom',cat:'베이스',facet:'장소',desc:'교실',copyText:'classroom',img:'https://drive.google.com/file/d/1IYngx1LyNfFiMXoGD7TcUypb0XB4ROGD'},

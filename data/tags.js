@@ -131,4 +131,13 @@ window.DATA = [
   {id:'img-129',key:'closet',cat:'배경&환경',facet:'실내',desc:'옷장',copyText:'closet',img:'Link'},
   {id:'img-130',key:'workshop',cat:'배경&환경',facet:'실내',desc:'작업장',copyText:'workshop',img:'Link'},
   {id:'img-131',key:'dutch angle',cat:'베이스',facet:'카메라(POV)',desc:'기울여 촬영',copyText:'dutch angle',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/dutch%20angle.png'},
+  {id:'img-132',key:'from above',cat:'베이스',facet:'카메라(POV)',desc:'위에서 촬영',copyText:'from above',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/from%20above.png'},
+  {id:'img-133',key:'from behind',cat:'베이스',facet:'카메라(POV)',desc:'뒤에서 촬영',copyText:'from behind',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/from%20behind.png'},
+  {id:'img-134',key:'from below',cat:'베이스',facet:'카메라(POV)',desc:'아래에서 촬영',copyText:'from below',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/from%20below.png'},
+  {id:'img-135',key:'from side',cat:'베이스',facet:'카메라(POV)',desc:'옆에서 촬영',copyText:'from side',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/from%20side.png'},
+  {id:'img-136',key:'multiple views',cat:'베이스',facet:'카메라(POV)',desc:'다중 시점',copyText:'multiple views',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/multiple%20views.png'},
+  {id:'img-137',key:'profile',cat:'베이스',facet:'카메라(POV)',desc:'측면',copyText:'profile',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/profile.png'},
+  {id:'img-138',key:'sideways',cat:'베이스',facet:'카메라(POV)',desc:'90도 회전',copyText:'sideways',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/side%20ways.png'},
+  {id:'img-139',key:'straight-on',cat:'베이스',facet:'카메라(POV)',desc:'정면',copyText:'straight-on',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/straight-on.png'},
+  {id:'img-140',key:'upside-down',cat:'베이스',facet:'카메라(POV)',desc:'거꾸로',copyText:'upside-down',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/upside-down.png'},
 ];

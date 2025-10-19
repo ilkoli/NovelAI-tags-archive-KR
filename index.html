@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>NovelAI Tags Archive KR</title>
 
-<!-- Pretendard -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
 
 <style>
@@ -165,11 +164,23 @@ function start(){
       toTop=$('#toTop'), catChips=$('#catChips'), facetChips=$('#facetChips'),
       facetHelp=$('#facetHelp'), crumb=$('#crumb');
 
-  var safeStore=(function(){ try{ var k='__chk__'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return localStorage; }catch(e){ var m={}; return {getItem:function(k){return m[k]||null},setItem:function(k,v){m[k]=v},removeItem:function(k){delete m[k]}} })();
+  var safeStore=(function(){
+    try{
+      var k='__chk__'; localStorage.setItem(k,'1'); localStorage.removeItem(k);
+      return localStorage;
+    }catch(e){
+      var m={};
+      return {
+        getItem:function(k){return m[k]||null},
+        setItem:function(k,v){m[k]=v},
+        removeItem:function(k){delete m[k]}
+      }
+    }
+  })();
   var FKEY='wiki:favorites';
   function getFav(){ try{ return new Set(JSON.parse(safeStore.getItem(FKEY)||'[]')); }catch(e){ return new Set(); } }
   function setFav(s){ try{ safeStore.setItem(FKEY, JSON.stringify(Array.from(s))); }catch(e){} }
-}
+
   if(!Array.isArray(window.DATA)){
     g.innerHTML = '<div class="empty">데이터 로드 실패. data/tags.js 확인!</div>';
     return;
@@ -301,9 +312,11 @@ function start(){
     }
   });
 
-  document.querySelector('#q').addEventListener('input', function(e){ state.q=e.target.value; render(); });
-  document.querySelector('#sort').addEventListener('change', function(e){ state.sort=e.target.value; render(); });
-  document.querySelector('#reset').addEventListener('click', function(){ document.querySelector('#q').value=''; state.q=''; document.querySelector('#sort').value='original'; state.sort='original'; render(); });
+  q.addEventListener('input', function(e){ state.q=e.target.value; render(); });
+  sortSel.addEventListener('change', function(e){ state.sort=e.target.value; render(); });
+  resetBtn.addEventListener('click', function(){
+    q.value=''; state.q=''; sortSel.value='original'; state.sort='original'; render();
+  });
   window.addEventListener('scroll', function(){ if(window.scrollY>300) toTop.classList.add('show'); else toTop.classList.remove('show'); });
   toTop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
 

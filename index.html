@@ -169,7 +169,7 @@ function start(){
   var FKEY='wiki:favorites';
   function getFav(){ try{ return new Set(JSON.parse(safeStore.getItem(FKEY)||'[]')); }catch(e){ return new Set(); } }
   function setFav(s){ try{ safeStore.setItem(FKEY, JSON.stringify(Array.from(s))); }catch(e){} }
-
+}
   if(!Array.isArray(window.DATA)){
     g.innerHTML = '<div class="empty">데이터 로드 실패. data/tags.js 확인!</div>';
     return;

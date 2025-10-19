@@ -1,7 +1,7 @@
 // data/tags.js
 window.DATA = [
   {id:'img-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'마스터피스',copyText:'masterpiece',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'img-002',key:'distinct',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distict',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'img-002',key:'distinct',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distinct',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-003',key:'blurry',cat:'베이스',facet:'품질',desc:'흐릿한',copyText:'blurry',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-004',key:'high resolution',cat:'베이스',facet:'품질',desc:'높은 해상도',copyText:'high resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-005',key:'low resolution',cat:'베이스',facet:'품질',desc:'낮은 해상도',copyText:'low resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},

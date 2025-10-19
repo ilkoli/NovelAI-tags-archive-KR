@@ -130,6 +130,7 @@ window.DATA = [
   {id:'img-128',key:'armory',cat:'베이스',facet:'배경',desc:'무기고',copyText:'armory',img:'Link'},
   {id:'img-129',key:'closet',cat:'베이스',facet:'배경',desc:'옷장',copyText:'closet',img:'Link'},
   {id:'img-130',key:'workshop',cat:'베이스',facet:'배경',desc:'작업장',copyText:'workshop',img:'Link'},
-  {id:'img-131',key:'perfect *',cat:'베이스',facet:'퓸질',desc:'완벽한 *(신체부위)',copyText:'perfect *',img:'https://drive.google.com/file/d/1DBRHraTveUOLCCp3sEM1Bs6MM06_0CUn'},
-  {id:'img-132',key:'perfect anatomy',cat:'베이스',facet:'퓸',desc:'완벽한 해부학(신체)',copyText:'perfect anatomy',img:'https://drive.google.com/file/d/1FMChAVO6_vdu4DIyb7GRmU-AsaeTRSr_'},
+  {id:'img-131',key:'perfect *',cat:'베이스',facet:'품질',desc:'완벽한 *(신체부위)',copyText:'perfect *',img:'https://drive.google.com/file/d/1DBRHraTveUOLCCp3sEM1Bs6MM06_0CUn'},
+  {id:'img-132',key:'perfect anatomy',cat:'베이스',facet:'품질',desc:'완벽한 해부학(신체)',copyText:'perfect anatomy',img:'https://drive.google.com/file/d/1FMChAVO6_vdu4DIyb7GRmU-AsaeTRSr_'},
+  {id:'img-133',key:'detailed *',cat:'베이스',facet:'품질',desc:'디테일한 무언가',copyText:'detailed *',img:'https://drive.google.com/file/d/12tjIDusLtH_-DbykP_PBqXLLZkVxcm5S'},
 ];

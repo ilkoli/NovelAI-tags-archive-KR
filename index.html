@@ -9,107 +9,61 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"/>
 
 <style>
-:root{
-  --bg:#0b0c10;--panel:#121318;--text:#e8e8e8;--muted:#a7a7a7;--accent:#71c9f8;
-  --fav:#ffd166;--card:#161922;--card2:#1b1f2a;--shadow:0 10px 30px rgba(0,0,0,.35)
-}
+:root{--bg:#0b0c10;--panel:#121318;--text:#e8e8e8;--muted:#a7a7a7;--accent:#71c9f8;--fav:#ffd166;--card:#161922;--card2:#1b1f2a;--shadow:0 10px 30px rgba(0,0,0,.35)}
 *{box-sizing:border-box}
-html,body{
-  margin:0;height:100%;background:var(--bg);color:var(--text);
-  font:16px/1.55 "Pretendard Variable",Pretendard,system-ui,-apple-system,Segoe UI,Roboto,Noto Sans KR,Apple SD Gothic Neo,sans-serif
-}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:16px/1.55 "Pretendard Variable",Pretendard,system-ui,-apple-system,Segoe UI,Roboto,Noto Sans KR,Apple SD Gothic Neo,sans-serif}
 a{color:inherit;text-decoration:none}
-
 /* Header */
 header{background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.85));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid #1c1f29;position:relative;z-index:10}
 .wrap{max-width:1100px;margin:0 auto;padding:20px}
 .title{display:flex;align-items:center;gap:10px}
 .title h1{margin:0;font-size:22px;font-weight:800;letter-spacing:.2px}
 .desc{margin-top:8px;color:var(--muted);font-size:14px;line-height:1.6}
-
-/* controls (스크롤시 위로 사라지게) */
+/* controls */
 .fixed-controls{position:relative;top:0;z-index:15;background:linear-gradient(180deg,var(--bg),rgba(11,12,16,.9));backdrop-filter:blur(8px);padding:16px 20px 10px;border-bottom:1px solid #1c1f29}
 .controls{display:grid;gap:10px;grid-template-columns:1fr;grid-template-areas:"q" "sort" "reset" "count"}
-.controls .q{grid-area:q}
-.controls .sort{grid-area:sort}
-.controls .reset{grid-area:reset}
+.controls .q{grid-area:q}.controls .sort{grid-area:sort}.controls .reset{grid-area:reset}
 .controls .count{grid-area:count;justify-self:end;color:var(--muted);font-size:13px}
 .controls input,.controls select,.controls button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #2a2f3b;background:var(--panel);color:var(--text)}
-.controls input::placeholder{color:var(--muted)}
-.controls button{cursor:pointer;border-color:#2f3b47}
+.controls input::placeholder{color:var(--muted)} .controls button{cursor:pointer;border-color:#2f3b47}
 @media(min-width:900px){.controls{grid-template-columns:1fr 180px 240px auto;grid-template-areas:"q sort reset count"}}
-
 /* 섹션 라벨 */
 .section-head{display:flex;align-items:center;gap:10px;margin:12px 0 8px}
 .badge{font-size:11px;font-weight:700;letter-spacing:.4px;border:1px solid #506086;color:#a9c4ff;background:#12182a;padding:4px 8px;border-radius:6px;text-transform:uppercase}
 .sep{height:1px;background:linear-gradient(90deg,#2a3244,transparent);margin:10px 0}
-
 /* 칩 */
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}
 .chip{border-radius:999px;border:1.5px solid;cursor:pointer;user-select:none;transition:background .15s,border-color .15s,color .15s,transform .05s}
-.chip:active{transform:translateY(1px)}
-.chip:focus-visible{outline:2px solid #88c3ff;outline-offset:3px}
-
+.chip:active{transform:translateY(1px)} .chip:focus-visible{outline:2px solid #88c3ff;outline-offset:3px}
 /* 상위칩 */
-.chip.parent{
-  padding:7px 13px;font-size:14px;font-weight:600;
-  background:#202a42;border-color:#4b5f8f;color:#eaf1ff;
-  box-shadow:0 4px 10px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05)
-}
+.chip.parent{padding:7px 13px;font-size:14px;font-weight:600;background:#202a42;border-color:#4b5f8f;color:#eaf1ff;box-shadow:0 4px 10px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05)}
 .chip.parent:hover{background:#2a3654;border-color:#6f86d6}
-.chip.parent.active{
-  background:#5aa8ff;border-color:#82c6ff;color:#0a0e15;font-weight:700;
-  box-shadow:0 0 0 2px rgba(130,198,255,.35),0 8px 16px rgba(0,0,0,.4)
-}
-
+.chip.parent.active{background:#5aa8ff;border-color:#82c6ff;color:#0a0e15;font-weight:700;box-shadow:0 0 0 2px rgba(130,198,255,.35),0 8px 16px rgba(0,0,0,.4)}
 /* 하위칩 */
-.chip.facet{
-  padding:7px 12px;font-size:13.5px;font-weight:600;
-  background:#161f31;border-color:#4a566e;color:#e6ecff
-}
+.chip.facet{padding:7px 12px;font-size:13.5px;font-weight:600;background:#161f31;border-color:#4a566e;color:#e6ecff}
 .chip.facet:hover{background:#203152;border-color:#6c82c0}
 .chip.facet.active{background:#3e5fa8;border-color:#6f8fd6;color:#fff;box-shadow:0 0 0 2px rgba(111,143,214,.25)}
-
 /* 브레드크럼 */
-#crumb{font-size:13px;color:#b9c6e8;margin:6px 0 2px;font-weight:500}
-#crumb b{color:#eaf1ff;font-weight:600}
-
+#crumb{font-size:13px;color:#b9c6e8;margin:6px 0 2px;font-weight:500} #crumb b{color:#eaf1ff;font-weight:600}
 /* 카드 */
 main{padding:24px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
 @media(max-width:640px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-
 .card{position:relative;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid #22293a;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
 .card.isFav{border-color:#8a6f2a;box-shadow:0 0 0 2px rgba(255,209,102,.2),var(--shadow)}
-
 .thumbWrap{position:relative}
 .thumb{aspect-ratio:1/1;display:block;width:100%;object-fit:cover;background:#0d0f14}
 .thumb.err{display:none}
 .thumb.placeholder{display:block;aspect-ratio:1/1;width:100%;background:linear-gradient(135deg,#151924,#1b2030)}
-
-.favBtn{
-  position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;justify-content:center;
-  width:30px;height:30px;border-radius:999px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);
-  color:#6b7a8d;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25); z-index:3;
-}
+.favBtn{position:absolute;left:8px;top:8px;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:999px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);color:#6b7a8d;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25); z-index:3}
 .favBtn[aria-pressed="true"]{background:rgba(255,209,102,.2);color:var(--fav);border-color:#8a6f2a;box-shadow:0 0 0 2px rgba(255,209,102,.2),0 6px 16px rgba(0,0,0,.35)}
-
-.copyBtn{
-  position:absolute;right:8px;bottom:8px;padding:7px 10px;border-radius:10px;border:1px solid #2a2f3b;
-  background:rgba(10,12,18,.75);backdrop-filter:blur(4px);color:#dff2ff;cursor:pointer; z-index:2;
-}
-
-.meta{padding:10px 12px;border-top:1px solid #22293a}
-.meta .name{font-size:15px;font-weight:800}
-.meta .sub{margin-top:4px;color:#aeb6c9;font-size:12px}
-
-/* 기타 */
+.copyBtn{position:absolute;right:8px;bottom:8px;padding:7px 10px;border-radius:10px;border:1px solid #2a2f3b;background:rgba(10,12,18,.75);backdrop-filter:blur(4px);color:#dff2ff;cursor:pointer; z-index:2}
+.meta{padding:10px 12px;border-top:1px solid #22293a}.meta .name{font-size:15px;font-weight:800}.meta .sub{margin-top:4px;color:#aeb6c9;font-size:12px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f1724;border:1px solid #2a3651;color:#cfe9ff;padding:10px 14px;border-radius:12px;opacity:0;transition:.25s;pointer-events:none}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .empty{color:var(--muted);text-align:center;padding:40px;border:1px dashed #2b3241;border-radius:12px}
 #toTop{position:fixed;bottom:28px;right:28px;background:rgba(10,12,18,.8);border:1px solid #2a2f3b;color:var(--accent);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:.25s}
-#toTop.show{opacity:1;pointer-events:auto;transform:translateY(0)}
-#toTop:hover{background:rgba(113,201,248,.15)}
+#toTop.show{opacity:1;pointer-events:auto;transform:translateY(0)} #toTop:hover{background:rgba(113,201,248,.15)}
 </style>
 </head>
 <body>
@@ -178,8 +132,7 @@ main{padding:24px 0}
 <div id="toast" class="toast"></div>
 
 <script>
-/* ====== 이미지 데이터 json 파일로 돌림 ====== */
-/* ====== json 파일로 변경함 ====== */
+/* 공유 링크 → 표시 가능한 URL로 변환 */
 function toDirectImage(url, size){
   if(!url) return url;
   var s = size || 600;
@@ -204,7 +157,7 @@ var FACETS = {
   "소품·효과":["무기/장비","생활/장식","시각 효과"]
 };
 
-/* ===== 여기부터 기존 렌더링 로직을 start() 안으로 옮김 ===== */
+/* ===== 렌더링 로직 ===== */
 function start(){
   function $(sel,root){ return (root||document).querySelector(sel); }
   var g=$('#grid'), empty=$('#empty'), q=$('#q'), sortSel=$('#sort'),
@@ -212,13 +165,13 @@ function start(){
       toTop=$('#toTop'), catChips=$('#catChips'), facetChips=$('#facetChips'),
       facetHelp=$('#facetHelp'), crumb=$('#crumb');
 
-  var safeStore=(function(){ try{ var k='__chk__'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return localStorage; }catch(e){ var m={}; return {getItem:function(k){return m[k]||null},setItem:function(k,v){m[k]=v},removeItem:function(k){delete m[k]}} }})();
+  var safeStore=(function(){ try{ var k='__chk__'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return localStorage; }catch(e){ var m={}; return {getItem:function(k){return m[k]||null},setItem:function(k,v){m[k]=v},removeItem:function(k){delete m[k]}} })();
   var FKEY='wiki:favorites';
   function getFav(){ try{ return new Set(JSON.parse(safeStore.getItem(FKEY)||'[]')); }catch(e){ return new Set(); } }
   function setFav(s){ try{ safeStore.setItem(FKEY, JSON.stringify(Array.from(s))); }catch(e){} }
 
   if(!Array.isArray(window.DATA)){
-    g.innerHTML = '<div class="empty">데이터 로드 실패. data/tags.json 확인!</div>';
+    g.innerHTML = '<div class="empty">데이터 로드 실패. data/tags.js 확인!</div>';
     return;
   }
 
@@ -244,8 +197,7 @@ function start(){
     if(imgEl){
       imgEl.addEventListener('error', function(){
         imgEl.classList.add('err');
-        var ph=document.createElement('div');
-        ph.className='thumb placeholder';
+        var ph=document.createElement('div'); ph.className='thumb placeholder';
         imgEl.parentNode.insertBefore(ph, imgEl);
       });
     }
@@ -357,16 +309,15 @@ function start(){
 
   renderFacetChips(); render();
 }
+</script>
 
-/* ===== JSON 로드(같은 레포에서) ===== */
+<!-- ===== JSON fetch 대신 JS 배열 로드 ===== -->
+<script src="data/tags.js?v=1"></script>
+<script>
 document.addEventListener('DOMContentLoaded', function(){
-  fetch('data/tags.json?v='+Date.now())
-    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function(json){ window.DATA=json; start(); })
-    .catch(function(e){
-      console.error(e);
-      document.querySelector('#grid').innerHTML='<div class="empty">data/tags.json을 불러오지 못했습니다.</div>';
-    });
+  if (Array.isArray(window.DATA)) start();
+  else document.querySelector('#grid').innerHTML =
+    '<div class="empty">data/tags.js를 불러오지 못했습니다.</div>';
 });
 </script>
 </body>

@@ -86,4 +86,6 @@ window.DATA = [
   {id:'img-084',key:'bloom',cat:'베이스',facet:'조명',desc:'희미한 발산 조명',copyText:'bloom',img:'https://drive.google.com/file/d/1BNZxQ4fGRO1viu9Wa4-Iy3o92j0A8dIZ'},
   {id:'img-085',key:'moonlight',cat:'베이스',facet:'조명',desc:'달빛',copyText:'moonlight',img:'https://drive.google.com/file/d/1hyslFaKG7TjPRKKzwcs6pKKXAfDl5Rom'},
   {id:'img-086',key:'caustics',cat:'베이스',facet:'조명',desc:'수중 조명',copyText:'caustics',img:'https://drive.google.com/file/d/1BrgQ2WZUIcMAch_9bhHtaBrbzkLbV8aE'},
+  {id:'img-087',key:'dispersion (optics)',cat:'베이스',facet:'조명',desc:'분광',copyText:'dispersion (optics)',img:'https://drive.google.com/file/d/1VvBUizteD3sfW0ZDNGzuvGupmQ9jhvgJ'},
+  {id:'img-088',key:'crack of light',cat:'베이스',facet:'조명',desc:'틈으로 새어드는 빛',copyText:'crack of light',img:'https://drive.google.com/file/d/1mwhJi8vEDjeK4BVhMwp4XwcO8_wEMXhP'},
 ];

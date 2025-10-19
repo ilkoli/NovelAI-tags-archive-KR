@@ -130,4 +130,5 @@ window.DATA = [
   {id:'img-128',key:'armory',cat:'배경&환경',facet:'실내',desc:'무기고',copyText:'armory',img:'Link'},
   {id:'img-129',key:'closet',cat:'배경&환경',facet:'실내',desc:'옷장',copyText:'closet',img:'Link'},
   {id:'img-130',key:'workshop',cat:'배경&환경',facet:'실내',desc:'작업장',copyText:'workshop',img:'Link'},
+  {id:'img-131',key:'dutch angle',cat:'베이스',facet:'카메라(POV)',desc:'기울여 촬영',copyText:'dutch angle',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%B9%B4%EB%A9%94%EB%9D%BC(POV)/dutch%20angle.png'},
 ];

@@ -120,4 +120,9 @@ window.DATA = [
   {id:'img-118',key:'infirmary',cat:'베이스',facet:'장소',desc:'보건실/양호실',copyText:'infirmary',img:'Link'},
   {id:'img-119',key:'kitchen',cat:'베이스',facet:'장소',desc:'주방/부엌',copyText:'kitchen',img:'Link'},
   {id:'img-120',key:'laboratory',cat:'베이스',facet:'장소',desc:'실험실/연구실',copyText:'laboratory',img:'Link'},
+  {id:'img-121',key:'library',cat:'베이스',facet:'장소',desc:'도서관',copyText:'library',img:'Link'},
+  {id:'img-122',key:'living room',cat:'베이스',facet:'장소',desc:'거실',copyText:'living room',img:'Link'},
+  {id:'img-123',key:'office',cat:'베이스',facet:'장소',desc:'사무실',copyText:'office',img:'Link'},
+  {id:'img-124',key:'pool',cat:'베이스',facet:'장소',desc:'수영장',copyText:'pool',img:'Link'},
+  {id:'img-125',key:'stage',cat:'베이스',facet:'장소',desc:'무대',copyText:'stage',img:'Link'},
 ];

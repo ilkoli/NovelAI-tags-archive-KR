@@ -1,9 +1,9 @@
 // data/tags.js
 window.DATA = [
   {id:'img-001',key:'masterpiece',cat:'베이스',facet:'품질',desc:'마스터피스',copyText:'masterpiece',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'img-002',key:'distict',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distict',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'img-002',key:'distinct',cat:'베이스',facet:'품질',desc:'뚜렷한',copyText:'distict',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-003',key:'blurry',cat:'베이스',facet:'품질',desc:'흐릿한',copyText:'blurry',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
-  {id:'img-004',key:'high resolution',cat:'베이스',facet:'품질',desc:'높은 해상도',copyText:'highres',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
+  {id:'img-004',key:'high resolution',cat:'베이스',facet:'품질',desc:'높은 해상도',copyText:'high resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-005',key:'low resolution',cat:'베이스',facet:'품질',desc:'낮은 해상도',copyText:'low resolution',img:'https://i.postimg.cc/mrR6rvN5/no-images.jpg'},
   {id:'img-006',key:'high quality',cat:'베이스',facet:'품질',desc:'고퀄리티',copyText:'high quality',img:'https://drive.google.com/file/d/1WX3A02MeOZdSN9aNGYS6dKzMviH6WKQ0'},
   {id:'img-007',key:'low quality',cat:'베이스',facet:'품질',desc:'저퀄리티',copyText:'low quality',img:'https://drive.google.com/file/d/1SwVUNyoVtchNG6DgWzIhq1hFohqS1tYk'},
@@ -49,7 +49,7 @@ window.DATA = [
   {id:'img-047',key:'realistic',cat:'베이스',facet:'화풍',desc:'현실주의',copyText:'realistic',img:'https://drive.google.com/file/d/14Tw2dJUZTBADb66rvnJwYb8yc_qfHUj7'},
   {id:'img-048',key:'abstract',cat:'베이스',facet:'화풍',desc:'추상화',copyText:'abstract',img:'https://drive.google.com/file/d/1i94L2K2KNMB_tA9-DUTAvYGq7cdafzqa'},
   {id:'img-049',key:'art-nouveau',cat:'베이스',facet:'화풍',desc:'아르 누보',copyText:'art-nouveau',img:'https://drive.google.com/file/d/1n5ynzvKDgnGXxzZXfDuu-Pg0w2SF35JF'},
-  {id:'img-050',key:'impressionism',cat:'베이스',facet:'화풍',desc:'인상주의',copyText:'empressionism',img:'https://drive.google.com/file/d/1GEpRtWNGld3AyXHKwEi1EmFHYsKmy-Jx'},
+  {id:'img-050',key:'impressionism',cat:'베이스',facet:'화풍',desc:'인상주의',copyText:'impressionism',img:'https://drive.google.com/file/d/1GEpRtWNGld3AyXHKwEi1EmFHYsKmy-Jx'},
   {id:'img-051',key:'nihonga',cat:'베이스',facet:'화풍',desc:'일본화',copyText:'nihonga',img:'https://drive.google.com/file/d/16_KY8fo13x-ttfuwKIAwHMedGKAXWQGK'},
   {id:'img-052',key:'ukiyo-e',cat:'베이스',facet:'화풍',desc:'우키요에',copyText:'ukiyo-e',img:'https://drive.google.com/file/d/1DX9-POD7uQzPc6pGG6PGG63ayFZh7Icd'},
   {id:'img-053',key:'retro-artstyle',cat:'베이스',facet:'화풍',desc:'레트로',copyText:'retro-artstyle',img:'https://drive.google.com/file/d/1_4kPQk8Dcidlx5ACfp2BlJhhWQ8s05vF'},

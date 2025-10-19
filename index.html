@@ -178,30 +178,6 @@ main{padding:24px 0}
 <div id="toast" class="toast"></div>
 
 <script>
-/* ====== 공유 링크 → 직접 표시 가능한 이미지 URL로 변환 ====== */
-/* 기본값: 드라이브는 썸네일(w600)로 변환. item.thumbSize로 개별 변경 가능. */
-function toDirectImage(url, size){
-  if(!url) return url;
-  var s = size || 600;
-
-  // Google Drive: /file/d/<ID>/view
-  var m = url.match(/https?:\/\/drive\.google\.com\/file\/d\/([^/]+)/i);
-  if(m) return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
-
-  // Google Drive: ...?id=<ID>
-  m = url.match(/[?&]id=([^&]+)/i);
-  if(m && /drive\.google\.com/i.test(url)) {
-    return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
-  }
-
-  // Google Drive "uc?export=" 형태 → 썸네일로 치환
-  m = url.match(/https?:\/\/drive\.google\.com\/uc\?.*?[?&]id=([^&]+)/i);
-  if(m) return 'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w'+s;
-
-  // 그 외(이미 직접 URL이거나 다른 호스팅)은 그대로
-  return url;
-}
-
 /* ====== 이미지 데이터 json 파일로 돌림 ====== */
 /* ====== json 파일로 변경함 ====== */
 function toDirectImage(url, size){

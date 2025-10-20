@@ -206,4 +206,8 @@ window.DATA = [
   {id:'img-204',key:'troll',cat:'캐릭터',facet:'종족',desc:'트롤',copyText:'troll',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/troll.png'},
   {id:'img-205',key:'ogre',cat:'캐릭터',facet:'종족',desc:'오우거',copyText:'ogre',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/ogre.png'},
   {id:'img-206',key:'hobgoblin',cat:'캐릭터',facet:'종족',desc:'홉고블린',copyText:'hobgoblin',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/hobgoblin.png'},
+  {id:'img-207',key:'dwarf',cat:'캐릭터',facet:'종족',desc:'드워프',copyText:'dwarf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/dwarf.png'},
+  {id:'img-208',key:'halfling',cat:'캐릭터',facet:'종족',desc:'하플링',copyText:'halfling',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/halfling.png'},
+  {id:'img-209',key:'gnome',cat:'캐릭터',facet:'종족',desc:'노움',copyText:'gnome',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/gnome.png'},
+  {id:'img-210',key:'kobold',cat:'캐릭터',facet:'종족',desc:'코볼트',copyText:'kobold',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/kobold.png'},
 ];

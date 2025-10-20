@@ -227,4 +227,8 @@ window.DATA = [
   {id:'img-225',key:'incubus',cat:'캐릭터',facet:'종족',desc:'인큐버스',copyText:'incubus',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/incubus.png'},
   {id:'img-226',key:'imp',cat:'캐릭터',facet:'종족',desc:'임프, 하급 악마',copyText:'imp',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/imp.png'},
   {id:'img-227',key:'fallen angel',cat:'캐릭터',facet:'종족',desc:'타락천사',copyText:'fallen angel',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/fallen%20angel.png'},
+  {id:'img-228',key:'angel',cat:'캐릭터',facet:'종족',desc:'천사',copyText:'angel',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/angel.png'},
+  {id:'img-229',key:'archangel',cat:'캐릭터',facet:'종족',desc:'대천사',copyText:'archangel',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/archangel.png'},
+  {id:'img-230',key:'seraph',cat:'캐릭터',facet:'종족',desc:'세라프',copyText:'seraph',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/seraph.png'},
+  {id:'img-231',key:'celestial',cat:'캐릭터',facet:'종족',desc:'천족',copyText:'celestial',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/celestial.png'},
 ];

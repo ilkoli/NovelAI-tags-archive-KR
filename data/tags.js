@@ -187,4 +187,6 @@ window.DATA = [
   {id:'img-185',key:'asian',cat:'캐릭터',facet:'인종',desc:'아시안, 아시아인, 동양인',copyText:'asian',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/asian.png'},
   {id:'img-186',key:'african',cat:'캐릭터',facet:'인종',desc:'아프리카인',copyText:'african',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/african.png'},
   {id:'img-187',key:'hispanic',cat:'캐릭터',facet:'인종',desc:'히스패닉, 라티노',copyText:'hispanic',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/hispanic.png'},
+  {id:'img-188',key:'tsundere',cat:'캐릭터',facet:'성격',desc:'츤데레',copyText:'tsundere',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%84%B1%EA%B2%A9/tsundere.png'},
+  {id:'img-189',key:'yandere',cat:'캐릭터',facet:'성격',desc:'얀데레',copyText:'yandere',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%84%B1%EA%B2%A9/yandere.png'},
 ];

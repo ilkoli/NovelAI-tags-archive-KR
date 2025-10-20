@@ -171,4 +171,9 @@ window.DATA = [
   {id:'img-169',key:':q',cat:'동작',facet:'표정',desc:':q, 혀 내밀기 위쪽, 메롱',copyText:':q',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%EF%BC%9Aq.png'},
   {id:'img-170',key:';q',cat:'동작',facet:'표정',desc:'혀 내밀기 위쪽 윙크, 윙크 메롱',copyText:';q',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%3Bq.png'},
   {id:'img-171',key:'@_@',cat:'동작',facet:'표정',desc:'뱅글 눈, 골뱅이 눈',copyText:'@_@',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%40_%40.png'},
+  {id:'img-172',key:'*others',cat:'캐릭터',facet:'인원',desc:'n명',copyText:'*others',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/3others.png'},
+  {id:'img-173',key:'1boy',cat:'캐릭터',facet:'인원',desc:'남자 1명',copyText:'1boy',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/1boy.png'},
+  {id:'img-174',key:'1girl',cat:'캐릭터',facet:'인원',desc:'여자 1명',copyText:'1girl',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/1girl.png'},
+  {id:'img-175',key:'*boys',cat:'캐릭터',facet:'인원',desc:'남자 n명',copyText:'*boys',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/3boys.png'},
+  {id:'img-176',key:'*girls',cat:'캐릭터',facet:'인원',desc:'여자 n명',copyText:'*girls',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/3girls.png'},
 ];

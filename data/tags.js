@@ -189,4 +189,8 @@ window.DATA = [
   {id:'img-187',key:'hispanic',cat:'캐릭터',facet:'인종',desc:'히스패닉, 라티노',copyText:'hispanic',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/hispanic.png'},
   {id:'img-188',key:'tsundere',cat:'캐릭터',facet:'성격',desc:'츤데레',copyText:'tsundere',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%84%B1%EA%B2%A9/tsundere.png'},
   {id:'img-189',key:'yandere',cat:'캐릭터',facet:'성격',desc:'얀데레',copyText:'yandere',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%84%B1%EA%B2%A9/yandere.png'},
+  {id:'img-190',key:'human',cat:'캐릭터',facet:'종족',desc:'인간',copyText:'human',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/human.png'},
+  {id:'img-191',key:'cyborg',cat:'캐릭터',facet:'종족',desc:'사이보그',copyText:'cyborg',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/cyborg.png'},
+  {id:'img-192',key:'android',cat:'캐릭터',facet:'종족',desc:'안드로이드',copyText:'android',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/android.png'},
+  {id:'img-193',key:'homunculus',cat:'캐릭터',facet:'종족',desc:'호문쿨루스',copyText:'humunculus',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/homunculus.png'},
 ];

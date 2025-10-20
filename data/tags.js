@@ -221,4 +221,10 @@ window.DATA = [
   {id:'img-219',key:'merfolk',cat:'캐릭터',facet:'종족',desc:'인어족',copyText:'merfolk',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/merfolk.png'},
   {id:'img-220',key:'siren',cat:'캐릭터',facet:'종족',desc:'세이렌',copyText:'siren',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/siren.png'},
   {id:'img-221',key:'naiad',cat:'캐릭터',facet:'종족',desc:'나이아드, 샘물의 정령',copyText:'naiad',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/naiad.png'},
+  {id:'img-222',key:'demon',cat:'캐릭터',facet:'종족',desc:'악마',copyText:'demon',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/demon.png'},
+  {id:'img-223',key:'devil',cat:'캐릭터',facet:'종족',desc:'악마',copyText:'devil',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/devil.png'},
+  {id:'img-224',key:'succubus',cat:'캐릭터',facet:'종족',desc:'서큐버스',copyText:'succubus',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/succubus.png'},
+  {id:'img-225',key:'incubus',cat:'캐릭터',facet:'종족',desc:'인큐버스',copyText:'incubus',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/incubus.png'},
+  {id:'img-226',key:'imp',cat:'캐릭터',facet:'종족',desc:'임프, 하급 악마',copyText:'imp',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/imp.png'},
+  {id:'img-227',key:'fallen angel',cat:'캐릭터',facet:'종족',desc:'타락천사',copyText:'fallen angel',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/fallen%20angel.png'},
 ];

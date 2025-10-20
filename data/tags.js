@@ -201,4 +201,9 @@ window.DATA = [
   {id:'img-199',key:'sea elf',cat:'캐릭터',facet:'종족',desc:'씨엘프',copyText:'sea elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/sea%20elf.png'},
   {id:'img-200',key:'moon elf',cat:'캐릭터',facet:'종족',desc:'문엘프',copyText:'moon elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/moon%20elf.png'},
   {id:'img-201',key:'blood elf',cat:'캐릭터',facet:'종족',desc:'블러드엘프',copyText:'blood elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/blood%20elf.png'},
+  {id:'img-202',key:'orc',cat:'캐릭터',facet:'종족',desc:'오크',copyText:'orc',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/orc.png'},
+  {id:'img-203',key:'goblin',cat:'캐릭터',facet:'종족',desc:'고블린',copyText:'goblin',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/goblin.png'},
+  {id:'img-204',key:'troll',cat:'캐릭터',facet:'종족',desc:'트롤',copyText:'troll',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/troll.png'},
+  {id:'img-205',key:'ogre',cat:'캐릭터',facet:'종족',desc:'오우거',copyText:'ogre',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/ogre.png'},
+  {id:'img-206',key:'hobgoblin',cat:'캐릭터',facet:'종족',desc:'홉고블린',copyText:'hobgoblin',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/hobgoblin.png'},
 ];

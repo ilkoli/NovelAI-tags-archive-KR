@@ -193,4 +193,12 @@ window.DATA = [
   {id:'img-191',key:'cyborg',cat:'캐릭터',facet:'종족',desc:'사이보그',copyText:'cyborg',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/cyborg.png'},
   {id:'img-192',key:'android',cat:'캐릭터',facet:'종족',desc:'안드로이드',copyText:'android',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/android.png'},
   {id:'img-193',key:'homunculus',cat:'캐릭터',facet:'종족',desc:'호문쿨루스',copyText:'humunculus',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/homunculus.png'},
+  {id:'img-194',key:'elf',cat:'캐릭터',facet:'종족',desc:'엘프',copyText:'elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/elf.png'},
+  {id:'img-195',key:'high elf',cat:'캐릭터',facet:'종족',desc:'하이엘프',copyText:'high elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/high%20elf.png'},
+  {id:'img-196',key:'dark elf',cat:'캐릭터',facet:'종족',desc:'다크엘프',copyText:'dark elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/dark%20elf.png'},
+  {id:'img-197',key:'wood elf',cat:'캐릭터',facet:'종족',desc:'우드엘프',copyText:'wood elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/wood%20elf.png'},
+  {id:'img-198',key:'snow elf',cat:'캐릭터',facet:'종족',desc:'스노우엘프',copyText:'snow elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/snow%20elf.png'},
+  {id:'img-199',key:'sea elf',cat:'캐릭터',facet:'종족',desc:'씨엘프',copyText:'sea elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/sea%20elf.png'},
+  {id:'img-200',key:'moon elf',cat:'캐릭터',facet:'종족',desc:'문엘프',copyText:'moon elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/moon%20elf.png'},
+  {id:'img-201',key:'blood elf',cat:'캐릭터',facet:'종족',desc:'블러드엘프',copyText:'blood elf',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/blood%20elf.png'},
 ];

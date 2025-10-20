@@ -176,4 +176,11 @@ window.DATA = [
   {id:'img-174',key:'1girl',cat:'캐릭터',facet:'인원',desc:'여자 1명',copyText:'1girl',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/1girl.png'},
   {id:'img-175',key:'*boys',cat:'캐릭터',facet:'인원',desc:'남자 n명',copyText:'*boys',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/3boys.png'},
   {id:'img-176',key:'*girls',cat:'캐릭터',facet:'인원',desc:'여자 n명',copyText:'*girls',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%9B%90/3girls.png'},
+  {id:'img-177',key:'baby',cat:'캐릭터',facet:'연령',desc:'아기',copyText:'baby',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/baby.png'},
+  {id:'img-178',key:'child',cat:'캐릭터',facet:'연령',desc:'어린이',copyText:'child',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/child.png'},
+  {id:'img-179',key:'teen',cat:'캐릭터',facet:'연령',desc:'10대',copyText:'teen',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/teen.png'},
+  {id:'img-180',key:'adult',cat:'캐릭터',facet:'연령',desc:'성인',copyText:'adukt',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/adult.png'},
+  {id:'img-181',key:'mature',cat:'캐릭터',facet:'연령',desc:'성숙한',copyText:'mature',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/mature.png'},
+  {id:'img-182',key:'elderly',cat:'캐릭터',facet:'연령',desc:'노년의',copyText:'elderly',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/elderly.png'},
+  {id:'img-183',key:'old',cat:'캐릭터',facet:'연령',desc:'늙은',copyText:'old',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/old.png'},
 ];

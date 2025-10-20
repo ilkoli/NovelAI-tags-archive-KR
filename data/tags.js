@@ -249,7 +249,7 @@ window.DATA = [
   {id:'img-250',key:'facepalm',cat:'동작',facet:'표정',desc:'손으로 가린',copyText:'facepalm',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/facepalm.png'},
   {id:'img-251',key:'flustered',cat:'동작',facet:'표정',desc:'당황',copyText:'flustered',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/flustered.png'},
   {id:'img-252',key:'frown',cat:'동작',facet:'표정',desc:'찡그린',copyText:'frown',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/frown.png'},
-  {id:'img-253',key:'frown',cat:'동작',facet:'표정',desc:'불만',copyText:'frown',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/frustrated.png'},
+  {id:'img-253',key:'frustrated',cat:'동작',facet:'표정',desc:'불만',copyText:'frustrated',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/frustrated.png'},
   {id:'img-254',key:'furrowed brow',cat:'동작',facet:'표정',desc:'찌푸린 눈썹',copyText:'furrowed brow',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/furrowed%20brow.png'},
   {id:'img-255',key:'grimace',cat:'동작',facet:'표정',desc:'찡그린',copyText:'grimace',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/grimace.png'},
   {id:'img-256',key:'guilt',cat:'동작',facet:'표정',desc:'죄책감',copyText:'guilt',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/guilt.png'},

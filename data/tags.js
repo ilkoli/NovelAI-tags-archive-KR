@@ -183,4 +183,8 @@ window.DATA = [
   {id:'img-181',key:'mature',cat:'캐릭터',facet:'연령',desc:'성숙한',copyText:'mature',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/mature.png'},
   {id:'img-182',key:'elderly',cat:'캐릭터',facet:'연령',desc:'노년의',copyText:'elderly',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/elderly.png'},
   {id:'img-183',key:'old',cat:'캐릭터',facet:'연령',desc:'늙은',copyText:'old',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%97%B0%EB%A0%B9/old.png'},
+  {id:'img-184',key:'caucasian',cat:'캐릭터',facet:'인종',desc:'백인, 코커시안',copyText:'caucasian',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/caucasian.png'},
+  {id:'img-185',key:'asian',cat:'캐릭터',facet:'인종',desc:'아시안, 아시아인, 동양인',copyText:'asian',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/asian.png'},
+  {id:'img-186',key:'african',cat:'캐릭터',facet:'인종',desc:'아프리카인',copyText:'african',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/african.png'},
+  {id:'img-187',key:'hispanic',cat:'캐릭터',facet:'인종',desc:'히스패닉, 라티노',copyText:'hispanic',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%9D%B8%EC%A2%85/hispanic.png'},
 ];

@@ -97,7 +97,7 @@ window.DATA = [
   {id:'img-095',key:'fire',cat:'베이스',facet:'조명',desc:'불',copyText:'fire',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/fire.png'},
   {id:'img-096',key:'ember',cat:'베이스',facet:'조명',desc:'불꽃',copyText:'ember',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/embers.png'},
   {id:'img-097',key:'oil lamp',cat:'베이스',facet:'조명',desc:'오일 램프',copyText:'oil lamp',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/oil%20lamp.png'},
-  {id:'img-098',key:'muzzle flach',cat:'베이스',facet:'조명',desc:'총구 섬광',copyText:'muzzle flash',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/muzzle%20flash.png'},
+  {id:'img-098',key:'muzzle flash',cat:'베이스',facet:'조명',desc:'총구 섬광',copyText:'muzzle flash',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/muzzle%20flash.png'},
   {id:'img-099',key:'candlelight',cat:'베이스',facet:'조명',desc:'촛불',copyText:'candlelight',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/candlelignt.png'},
   {id:'img-100',key:'chandelier',cat:'베이스',facet:'조명',desc:'샹들리에',copyText:'chamdelier',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/chandelier.png'},
   {id:'img-101',key:'ceiling light',cat:'베이스',facet:'조명',desc:'천장 등',copyText:'ceiling light',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%B2%A0%EC%9D%B4%EC%8A%A4/%EC%A1%B0%EB%AA%85/ceiling%20light.png'},

@@ -231,4 +231,12 @@ window.DATA = [
   {id:'img-229',key:'archangel',cat:'캐릭터',facet:'종족',desc:'대천사',copyText:'archangel',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/archangel.png'},
   {id:'img-230',key:'seraph',cat:'캐릭터',facet:'종족',desc:'세라프',copyText:'seraph',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/seraph.png'},
   {id:'img-231',key:'celestial',cat:'캐릭터',facet:'종족',desc:'천족',copyText:'celestial',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/celestial.png'},
+  {id:'img-234',key:'undead',cat:'캐릭터',facet:'종족',desc:'언데드',copyText:'undead',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/undead.png'},
+  {id:'img-235',key:'zombie',cat:'캐릭터',facet:'종족',desc:'좀비',copyText:'zombie',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/zombie.png'},
+  {id:'img-236',key:'skeleton',cat:'캐릭터',facet:'종족',desc:'스켈레톤, 해골',copyText:'skeleton',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/skeleton.png'},
+  {id:'img-237',key:'vampire',cat:'캐릭터',facet:'종족',desc:'뱀파이어, 흡혈귀',copyText:'vampire',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/vampire.png'},
+  {id:'img-238',key:'lich',cat:'캐릭터',facet:'종족',desc:'리치',copyText:'lich',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/lich.png'},
+  {id:'img-239',key:'ghost',cat:'캐릭터',facet:'종족',desc:'유령',copyText:'ghost',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/ghost.png'},
+  {id:'img-240',key:'wraith',cat:'캐릭터',facet:'종족',desc:'망령',copyText:'wraith',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/wraith.png'},
+  {id:'img-241',key:'reaper',cat:'캐릭터',facet:'종족',desc:'리퍼',copyText:'reaper',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/reaper.png'},
 ];

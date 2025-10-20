@@ -168,4 +168,7 @@ window.DATA = [
   {id:'img-166',key:';)',cat:'동작',facet:'표정',desc:'윙크',copyText:';)',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%3B).png'},
   {id:'img-167',key:';<,cat:'동작',facet:'표정',desc:';<, 윙크 고양이 입',copyText:';<',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%3B%EF%BC%9C.png'},
   {id:'img-168',key:';3',cat:'동작',facet:'표정',desc:';3, 윙크 고양이 입, 윙크 3입',copyText:';3',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%3B3.png'},
+  {id:'img-169',key:':q',cat:'동작',facet:'표정',desc:':q, 혀 내밀기 위쪽, 메롱',copyText:':q',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%EF%BC%9Aq.png'},
+  {id:'img-170',key:';q',cat:'동작',facet:'표정',desc:'혀 내밀기 위쪽 윙크, 윙크 메롱',copyText:';q',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%3Bq.png'},
+  {id:'img-171',key:'@_@',cat:'동작',facet:'표정',desc:'뱅글 눈, 골뱅이 눈',copyText:'@_@',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EB%8F%99%EC%9E%91/%ED%91%9C%EC%A0%95/%40_%40.png'},
 ];

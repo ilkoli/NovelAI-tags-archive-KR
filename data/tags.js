@@ -216,4 +216,9 @@ window.DATA = [
   {id:'img-214',key:'nymph',cat:'캐릭터',facet:'종족',desc:'님프',copyText:'nymph',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/nymph.png'},
   {id:'img-215',key:'fae',cat:'캐릭터',facet:'종족',desc:'페이',copyText:'fae',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/fae.png'},
   {id:'img-216',key:'elemental',cat:'캐릭터',facet:'종족',desc:'정령',copyText:'elemental',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/elemental.png'},
+  {id:'img-217',key:'mermaid',cat:'캐릭터',facet:'종족',desc:'인어',copyText:'mermaid',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/mermaid.png'},
+  {id:'img-218',key:'merman',cat:'캐릭터',facet:'종족',desc:'남인어',copyText:'merman',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/merman.png'},
+  {id:'img-219',key:'merfolk',cat:'캐릭터',facet:'종족',desc:'인어족',copyText:'merfolk',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/merfolk.png'},
+  {id:'img-220',key:'siren',cat:'캐릭터',facet:'종족',desc:'세이렌',copyText:'siren',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/siren.png'},
+  {id:'img-221',key:'naiad',cat:'캐릭터',facet:'종족',desc:'나이아드, 샘물의 정령',copyText:'naiad',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/naiad.png'},
 ];

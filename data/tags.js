@@ -239,4 +239,9 @@ window.DATA = [
   {id:'img-239',key:'ghost',cat:'캐릭터',facet:'종족',desc:'유령',copyText:'ghost',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/ghost.png'},
   {id:'img-240',key:'wraith',cat:'캐릭터',facet:'종족',desc:'망령',copyText:'wraith',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/wraith.png'},
   {id:'img-241',key:'reaper',cat:'캐릭터',facet:'종족',desc:'리퍼',copyText:'reaper',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/reaper.png'},
+  {id:'img-242',key:'dragon',cat:'캐릭터',facet:'종족',desc:'드래곤, 용',copyText:'dragon',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/dragon.png'},
+  {id:'img-243',key:'dragonborn',cat:'캐릭터',facet:'종족',desc:'용족',copyText:'dragonbron',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/dragonborn.png'},
+  {id:'img-245',key:'draconian',cat:'캐릭터',facet:'종족',desc:'드라코니언',copyText:'draconian',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/draconian.png'},
+  {id:'img-246',key:'wyvern',cat:'캐릭터',facet:'종족',desc:'와이번',copyText:'wyvern',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/wyvern.png'},
+  {id:'img-247',key:'lizardman',cat:'캐릭터',facet:'종족',desc:'리자드맨',copyText:'lizardman',img:'https://storage.googleapis.com/novelai-tags-archive-kr/%EC%BA%90%EB%A6%AD%ED%84%B0/%EC%A2%85%EC%A1%B1/lizardman.png'},
 ];
